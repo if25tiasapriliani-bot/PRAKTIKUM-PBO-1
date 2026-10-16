@@ -10,7 +10,6 @@ class produk {
 
     //constant
     public const PAJAK = 0.11;
-
 }
 
 //object
