@@ -9,25 +9,19 @@ use pbo\marketplace\produk;
 //object
 $produk = new produk('P0001', 'laptop',10000000, 5);
 
+$produk->setKode('P0001')->setNama('Laptop')->setHarga(10000000)->setStok(5);
 
-//hitung pajak
-$pajak = Produk::PAJAK * 100;
-$jumlahPajak = $produk->harga * Produk::PAJAK; //1.100.00
-
-//total
-$total = $produk->harga + $jumlahPajak;
-
-//hasil
-echo "produk: ". $produk->nama;
+//hasil 
+echo "Produk: ". $produk->getNama();
 echo "<br/>";
 
-echo "harga: Rp. ". $produk->harga;
+echo "Harga: Rp. ". $produk->getHarga();
 echo "<br/>";
 
-echo "stok: ". $produk->stock;
+echo "Stok: ". $produk->getStok();
 echo "<br/>";
 
-echo "Pajak: ". $pajak."%";
+echo "Pajak: ". $produk->pajak() . "%";
 echo "<br/>";
 
-echo "Total Harga Setelah Pajak: ". $total ;
+echo "Total Harga Setelah Pajak: ". $produk->total() ;
