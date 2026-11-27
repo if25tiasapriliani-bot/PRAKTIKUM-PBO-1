@@ -2,18 +2,18 @@
 
 namespace pbo\marketplace;
 
-class Produk {
+trait Produk {
 
     //property
    private string $kode;
    private string $nama;
    private int $harga;
-   private int $stock;
+   private int $stok;
 
     //constant
     public const PAJAK = 0.11;
 
-    public function __construct(){
+    public function __construct() {
        
     }
 
